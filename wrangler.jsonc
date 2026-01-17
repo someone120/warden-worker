@@ -18,7 +18,7 @@
   "d1_databases": [
     {
       "binding": "vault1",
-      "database_id": "d4e07248-2f73-4edb-915d-8ec1a7991c88"
+      "database_id": "${D1_DATABASE_ID}"
       // database_name 可选，但建议写上以增强可读性
       // "database_name": "vault1"
     }
