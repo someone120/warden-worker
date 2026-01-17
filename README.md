@@ -44,15 +44,12 @@ wrangler d1 create vault1
 
 ### 3. 配置 Wrangler
 
-打开项目根目录下的 `wrangler.jsonc` 文件，找到 `d1_databases` 配置块，将 `database_id` 替换为你刚才创建的 ID：
+打开项目根目录下的 `wrangler.toml` 文件，找到 `d1_databases` 配置块，将 `database_id` 替换为你刚才创建的 ID：
 
-```jsonc
-  "d1_databases": [
-    {
-      "binding": "vault1",
-      "database_id": "你的_DATABASE_ID"
-    }
-  ],
+```toml
+[[d1_databases]]
+binding = "vault1"
+database_id = "你的_DATABASE_ID"
 ```
 
 ### 4. 初始化数据库

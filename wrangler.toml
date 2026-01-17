@@ -1,0 +1,20 @@
+name = "warden-worker"
+main = "build/index.js"
+compatibility_date = "2025-09-19"
+
+[[routes]]
+pattern = "warden.2x.nz"
+zone_name = "2x.nz"
+
+[[d1_databases]]
+binding = "vault1"
+database_id = "${D1_DATABASE_ID}"
+
+[observability.logs]
+enabled = false
+head_sampling_rate = 1
+invocation_logs = true
+persist = true
+
+[build]
+command = "cargo install -q worker-build && worker-build --release"
